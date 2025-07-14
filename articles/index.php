@@ -1,5 +1,5 @@
 <?php
-  require "./articles/articlesFunctions.php";
+  require "articlesFunctions.php";
   $articles = articlesQuery("SELECT * FROM articles");
 ?>
 
@@ -8,14 +8,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Musholla Al-Yaqin</title>
+  <title>Artikel</title>
 </head>
 <body>
-  <h1>Musholla Al-Yaqin</h1>
+  <h1>Artikel Musholla Al-Yaqin</h1>
 
+  <a href="../">Kembali</a>
   <div>
-    <p>Artikel</p>
-    <a href="./articles">Lihat Semua Artikel</a>
+    <a href="addArticle.php">Tambah Artikel</a>
     <table border="1" cellspacing="0" cellpading="10">
       <tr>
         <th>No</th>
@@ -29,7 +29,7 @@
         <tr>
           <td><?= $index + 1 ?></td>
           <td><?= $article["title"] ?></td>
-          <td><img src="./img/articles-image/<?= $article["image"] ?>" alt="<?= $article["title"] ?>" width="100"></td>
+          <td><img src="../img/articles-image/<?= $article["image"] ?>" alt="<?= $article["title"] ?>" width="100"></td>
           <td><?= $article["content"] ?></td>
           <td><?= $article["published_date"] ?></td>
           <td>
